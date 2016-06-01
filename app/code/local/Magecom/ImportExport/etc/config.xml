@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magecom ImportExport extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    Magecom
+ * @package     ImportExport
+ * @author      Aleksandr Drobot, <adrobot@magecom.net>
+ * @copyright   Copyright (c) 2016 Magecom.net
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Magecom_ImportExport>
+            <version>1.0.0</version>
+        </Magecom_ImportExport>
+    </modules>
+
+    <global>
+        <helpers>
+            <magecom_importexport>
+                <class>Magecom_ImportExport_Helper</class>
+            </magecom_importexport>
+        </helpers>
+
+        <!--<resources>-->
+            <!--<magecom_repair_setup>-->
+                <!--<setup>-->
+                    <!--<module>Magecom_Repair</module>-->
+                <!--</setup>-->
+                <!--<connection>-->
+                    <!--<use>core_setup</use>-->
+                <!--</connection>-->
+            <!--</magecom_repair_setup>-->
+        <!--</resources>-->
+    </global>
+
+    <frontend>
+        <!--<layout>-->
+            <!--<updates>-->
+                <!--<magecom_repair>-->
+                    <!--<file>magecom/repair.xml</file>-->
+                <!--</magecom_repair>-->
+            <!--</updates>-->
+        <!--</layout>-->
+
+        <routers>
+            <magecom_importexport>
+                <use>standard</use>
+                <args>
+                    <module>Magecom_ImportExport</module>
+                    <frontName>magecom_importexport</frontName>
+                </args>
+            </magecom_importexport>
+        </routers>
+    </frontend>
+</config>
