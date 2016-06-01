@@ -18,22 +18,10 @@
  */
 -->
 <config>
-    <!--<tabs>-->
-        <!--<magecom_core translate="label" module="magecom_core">-->
-            <!--<label>Magecom Core</label>-->
-            <!--<sort_order>23</sort_order>-->
-        <!--</magecom_core>-->
-    <!--</tabs>-->
-    <tabs>
-        <magecom_importexport translate="label" module="magecom_importexport">
-            <label>Magecom Core</label>
-            <sort_order>23</sort_order>
-        </magecom_importexport>
-    </tabs>
     <sections>
         <magecom_importexport translate="label" module="magecom_importexport">
-            <label>Core</label>
-            <tab>magecom_importexport</tab>
+            <label>Import/Export</label>
+            <tab>magecom_core</tab>
             <frontend_type>text</frontend_type>
             <sort_order>0</sort_order>
             <show_in_default>1</show_in_default>
