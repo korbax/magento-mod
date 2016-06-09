@@ -22,6 +22,9 @@
         <Magecom_ImportExport>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Mage_ImportExport/>
+            </depends>
         </Magecom_ImportExport>
     </modules>
 </config>

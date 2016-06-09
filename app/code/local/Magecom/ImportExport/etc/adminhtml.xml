@@ -18,8 +18,24 @@
  */
 -->
 <config>
+    <menu>
+        <magecom_importexport translate="title" module="magecom_importexport">
+            <title>Magecom</title>
+            <sort_order>1000</sort_order>
+            <children>
+                <items module="magecom_importexport">
+                    <title>Import</title>
+                    <action>magecom_importexport/adminhtml_import/start</action>
+                </items>
+            </children>
+        </magecom_importexport>
+    </menu>
+
     <acl>
         <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
             <admin>
                 <children>
                     <system>

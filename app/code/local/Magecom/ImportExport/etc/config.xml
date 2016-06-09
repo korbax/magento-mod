@@ -31,35 +31,54 @@
             </magecom_importexport>
         </helpers>
 
-        <!--<resources>-->
-            <!--<magecom_repair_setup>-->
-                <!--<setup>-->
-                    <!--<module>Magecom_Repair</module>-->
-                <!--</setup>-->
-                <!--<connection>-->
-                    <!--<use>core_setup</use>-->
-                <!--</connection>-->
-            <!--</magecom_repair_setup>-->
-        <!--</resources>-->
+        <!--<models>-->
+            <!--<magecom_importexport>-->
+                <!--<class>AvS_FastSimpleImport_Model</class>-->
+            <!--</magecom_importexport>-->
+
+            <!--<importexport>-->
+                <!--<rewrite>-->
+                    <!--<import_entity_product>Magecom_ImportExport_Model_Import_Entity_Product</import_entity_product>-->
+                <!--</rewrite>-->
+            <!--</importexport>-->
+        <!--</models>-->
+
+        <models>
+            <magecom_importexport>
+                <class>Magecom_ImportExport_Model</class>
+                <resourceModel>magecom_importexport_resource</resourceModel>
+            </magecom_importexport>
+
+            <magecom_importexport_resource>
+                <class>Magecom_ImportExport_Model_Resource</class>
+                <entities>
+                    <entity>
+                        <table>magecom_importexport_entity</table>
+                    </entity>
+                </entities>
+            </magecom_importexport_resource>
+        </models>
+
+        <resources>
+            <magecom_importexport_setup>
+                <setup>
+                    <module>Magecom_ImportExport</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </magecom_importexport_setup>
+        </resources>
     </global>
 
-    <frontend>
-        <!--<layout>-->
-            <!--<updates>-->
-                <!--<magecom_repair>-->
-                    <!--<file>magecom/repair.xml</file>-->
-                <!--</magecom_repair>-->
-            <!--</updates>-->
-        <!--</layout>-->
-
+    <admin>
         <routers>
             <magecom_importexport>
-                <use>standard</use>
+                <use>admin</use>
                 <args>
                     <module>Magecom_ImportExport</module>
                     <frontName>magecom_importexport</frontName>
                 </args>
             </magecom_importexport>
         </routers>
-    </frontend>
+    </admin>
+
 </config>
