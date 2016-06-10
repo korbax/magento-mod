@@ -1,11 +1,11 @@
 php:
-  image: magecom/php
-  ports:
-    - 9001:9001
+  image: magecom/php:dev56
+#  image: magecom/php:dev7
   volumes:
     - .:/var/www
   links:
     - mysql
+    - mailcatcher
 nginx:
   image: magecom/nginx
   ports:
@@ -26,3 +26,8 @@ phpmyadmin:
     - "8002:80"
   links:
     - mysql
+mailcatcher:
+  image: odaniait/mailcatcher-docker:latest
+  ports:
+    - "2525:2525"
+    - "1080:1080"

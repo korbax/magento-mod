@@ -24,9 +24,15 @@
             <sort_order>1000</sort_order>
             <children>
                 <items module="magecom_importexport">
-                    <title>Import</title>
-                    <action>magecom_importexport/adminhtml_import/start</action>
+                    <title>Test</title>
+                    <!--<action>magecom_importexport/adminhtml_import/start</action>-->
+                    <action>admin/system_config_edit_section_magecom_importexport</action>
                 </items>
+                <import translate="title" module="magecom_importexport">
+                    <title>Import</title>
+                    <action>magecom_importexport/adminhtml_import</action>
+                    <sort_order>10</sort_order>
+                </import>
             </children>
         </magecom_importexport>
     </menu>
