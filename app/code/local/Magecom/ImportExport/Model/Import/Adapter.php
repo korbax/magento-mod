@@ -9,7 +9,9 @@ class Magecom_ImportExport_Model_Import_Adapter
             Mage::throwException(Mage::helper('importexport')->__('Adapter type must be a non empty string'));
         }
         $adapterClass = __CLASS__ . '_' . ucfirst(strtolower($type));
+        Mage::log();
 
+//        $adapterClass = Magecom_ImportExport_Model_Import_Adapter_Txt
         if (!class_exists($adapterClass)) {
             Mage::throwException("'{$type}' file extension is not supported");
         }

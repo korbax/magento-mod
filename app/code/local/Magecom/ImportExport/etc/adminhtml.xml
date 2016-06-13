@@ -23,11 +23,10 @@
             <title>Magecom</title>
             <sort_order>1000</sort_order>
             <children>
-                <items module="magecom_importexport">
-                    <title>Test</title>
-                    <!--<action>magecom_importexport/adminhtml_import/start</action>-->
-                    <action>admin/system_config_edit_section_magecom_importexport</action>
-                </items>
+                <!--<items module="magecom_importexport">-->
+                    <!--<title>Test</title>-->
+                    <!--<action>admin/system_config_edit_section_magecom_importexport</action>-->
+                <!--</items>-->
                 <import translate="title" module="magecom_importexport">
                     <title>Import</title>
                     <action>magecom_importexport/adminhtml_import</action>
